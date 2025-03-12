@@ -5,23 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Product Catalog</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="" href="https://th.bing.com/th/id/OIP.RbDmmt0F982-5AzJmXvXtAHaHa?rs=1&pid=ImgDetMain" />
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.RbDmmt0F982-5AzJmXvXtAHaHa?rs=1&pid=ImgDetMain" />
 </head>
 <body>
     <header>
         <h1>Amazon 2</h1>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">Dark</button>
     </header>
 
-    <section id="products" class="product-list">
-
-    </section>
+    <section id="products" class="product-list"></section>
 
     <section id="cart" class="cart">
         <h2>Your Cart:</h2>
-        <ul id="cart-items">
-        </ul>
+        <ul id="cart-items"></ul>
         <p>Total Price: $<span id="total-price">0</span></p>
     </section>
+
+    <div id="image-modal" class="modal">
+        <span id="close-modal" class="close">&times;</span>
+        <img id="modal-image" class="modal-content" />
+    </div>
+
+    <br><br>
+    <div id="timer-container" class="timer-container">
+        <h3>Countdown Timer</h3>
+        <input type="number" id="seconds-input" placeholder="Enter seconds" min="1">
+        <div id="timer-display">00:00</div>
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" disabled>Pause</button>
+        <button id="reset-btn" disabled>Reset</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
